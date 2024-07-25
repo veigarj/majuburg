@@ -204,7 +204,7 @@ checkoutBtn.addEventListener("click", function(){
   const cartItems = cart.map((item) => {
     return (
       `
-      *${item.name}*, 
+      *${item.name}* 
       *Qtd:* (${item.quantity}),
       *Preço:* R$${item.price} |`
     )
@@ -217,7 +217,7 @@ checkoutBtn.addEventListener("click", function(){
     `)
   const phone = "21983580737"
 
-  window.open(`https://wa.me/${phone}?text=+${message} `)
+  window.open(`https://wa.me/${phone}?text=${message} `)
 
   cart = [];
   updateCartModal();
