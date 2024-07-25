@@ -204,13 +204,17 @@ checkoutBtn.addEventListener("click", function(){
   const cartItems = cart.map((item) => {
     return (
       `
-      *${item.name}* 
+      *${item.name}*, 
       *Qtd:* (${item.quantity}),
       *Preço:* R$${item.price} |`
     )
   }).join("")
 
-  const message = urlencodedtex(`${cartItems}`)
+  const message = encodeURIComponent(`${cartItems} 
+    Nome: ${nameInput.value}, 
+    Telefone: ${phoneInput.value},
+    Endereço: ${addressInput.value},
+    `)
   const phone = "21983580737"
 
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
