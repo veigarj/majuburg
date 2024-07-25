@@ -211,10 +211,9 @@ checkoutBtn.addEventListener("click", function(){
   }).join("")
 
   const message = urlencodedtex(`${cartItems}`)
-  //const phone = "21983580737"//
-  const phone = "21993999989"
+  const phone = "21983580737"
 
-  window.open(`https://wa.me/${phone}?text=${message}`)
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
 
   cart = [];
   updateCartModal();
