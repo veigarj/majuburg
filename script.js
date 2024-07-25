@@ -210,7 +210,7 @@ checkoutBtn.addEventListener("click", function(){
     )
   }).join("")
 
-  const message = encodeURIComponent(cartItems)
+  const message = urlencodedtex(`${cartItems}`)
   //const phone = "21983580737"//
   const phone = "21993999989"
 
