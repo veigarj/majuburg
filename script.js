@@ -204,8 +204,10 @@ checkoutBtn.addEventListener("click", function(){
   const cartItems = cart.map((item) => {
     let total = 0
     return (
-      ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} Total: ${total += item.price }|`
+      ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+         total += item.price
     )
+    
   }).join("")
 
   const message = encodeURIComponent(cartItems)
