@@ -205,8 +205,8 @@ checkoutBtn.addEventListener("click", function(){
     return (
       `
       *${item.name}*
-      *Qtd:*+(${item.quantity})
-      *Preço:*+R$${item.price} |`
+      *Qtd:*(${item.quantity})
+      *Preço:*R$${item.price} |`
     )
   }).join("")
 
