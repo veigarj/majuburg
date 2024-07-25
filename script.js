@@ -217,7 +217,7 @@ checkoutBtn.addEventListener("click", function(){
     `)
   const phone = "21983580737"
 
-  window.open(`https://wa.me/${phone}?text=+${message} `, "_blank")
+  window.open(`https://wa.me/${phone}?text=+${message} `)
 
   cart = [];
   updateCartModal();
