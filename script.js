@@ -175,23 +175,23 @@ phoneInput.addEventListener("input", function(event){
 // Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
 
-  // const isOpen = checkRestaurantOpen();
-  // if(!isOpen){
+   const isOpen = checkRestaurantOpen();
+   if(!isOpen){
 
-  //   Toastify({
-  //     text: "Ops o restaurante está fechado!",
-  //     duration: 3000,
-  //     close: true,
-  //     gravity: "top", // `top` or `bottom`
-  //     position: "right", // `left`, `center` or `right`
-  //     stopOnFocus: true, // Prevents dismissing of toast on hover
-  //     style: {
-  //       background: "#ef4444",
-  //     },
-  //   }).showToast();
+     Toastify({
+       text: "Ops o restaurante está fechado!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+       position: "right", // `left`, `center` or `right`
+       stopOnFocus: true, // Prevents dismissing of toast on hover
+       style: {
+        background: "#ef4444",
+      },
+   }).showToast();
 
-  //   return;
-  // }
+    return;
+  }
 
   if(cart.length === 0) return;
   if(addressInput.value === ""){
@@ -202,18 +202,20 @@ checkoutBtn.addEventListener("click", function(){
 
   //Enviar o pedido para api whats
   const cartItems = cart.map((item) => {
-    let total = 0
     return (
       ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-         total += item.price
     )
     
   }).join("")
 
-  const message = encodeURIComponent(cartItems)
+const message = encodeURIComponent(`${cartItems} 
+    Nome: ${nameInput.value}, 
+    Telefone: ${phoneInput.value},
+    Endereço: ${addressInput.value},
+    `)
   const phone = "5521983580737"
 
-  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
 
 
   cart = [];
