@@ -174,7 +174,7 @@ phoneInput.addEventListener("input", function(event){
 
 // Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
-
+   let total = 0
    const isOpen = checkRestaurantOpen();
    if(!isOpen){
 
@@ -203,7 +203,7 @@ checkoutBtn.addEventListener("click", function(){
   //Enviar o pedido para api whats
   const cartItems = cart.map((item) => {
     return (
-      ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+      ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | total += item.price`
     )
     
   }).join("")
