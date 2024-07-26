@@ -207,9 +207,9 @@ checkoutBtn.addEventListener("click", function(){
 ${item.name}
       Quantidade: (${item.quantity})
       Preço: R$${item.price} |
-      var total = ${total += item.price}`
+      `
     )
-    
+    let total = total += item.prive
   }).join("")
 
 const message = encodeURIComponent(`
