@@ -72,6 +72,7 @@ function addToCart(name, price){
 function updateCartModal(){
   cartItemsContainer.innerHTML = "";
   let total = 0;
+  let entrega = 5
 
   cart.forEach(item => {
     const cartItemElement = document.createElement("div");
@@ -83,6 +84,7 @@ function updateCartModal(){
           <p class="font-medium">${item.name}</p>
           <p>Qtd: ${item.quantity}</p>
           <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+          <p class="font-medium mt-2">R$ ${entrega}</p>
         </div>
 
 
@@ -93,7 +95,7 @@ function updateCartModal(){
       </div>
     `
 
-    total += item.price * item.quantity;
+    total += (item.price * item.quantity) + 5;
 
     cartItemsContainer.appendChild(cartItemElement)
 
