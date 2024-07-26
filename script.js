@@ -204,18 +204,20 @@ checkoutBtn.addEventListener("click", function(){
   const cartItems = cart.map((item) => {
     return (
       ` 
-      ${item.name}
+${item.name}
       Quantidade: (${item.quantity})
       Preço: R$${item.price} |
-      Total: ${total += item.price}`
+      var total = ${total += item.price}`
     )
     
   }).join("")
 
-const message = encodeURIComponent(`${cartItems} 
-    Nome: ${nameInput.value}, 
-    Telefone: ${phoneInput.value},
-    Endereço: ${addressInput.value},
+const message = encodeURIComponent(`
+${cartItems}
+Total: ${total}
+Nome: ${nameInput.value}, 
+Telefone: ${phoneInput.value},
+Endereço: ${addressInput.value},
     `)
   const phone = "5521983580737"
 
