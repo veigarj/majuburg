@@ -175,6 +175,7 @@ phoneInput.addEventListener("input", function(event){
 // Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
    let total = 0
+   let preco = 0
    //const isOpen = checkRestaurantOpen();
    // if(!isOpen){
 
@@ -206,15 +207,15 @@ checkoutBtn.addEventListener("click", function(){
       ` 
 ${item.name}
       Qtd: (${item.quantity})
-      Preço: R$ ${item.price * item.quantity}
-      Total: R$ ${total += item.price * item.quantity}
+      Preço: R$ ${preco += item.price * item.quantity}
       `)
+      //Total: R$ ${total += item.price * item.quantity}
   }).join("")
 
 const message = encodeURIComponent(`
 ${cartItems}
 Entrega: 5
-Total: ${total + 5}
+Total: ${preco + 5}
 Nome: ${nameInput.value}, 
 Telefone: ${phoneInput.value},
 Endereço: ${addressInput.value},
