@@ -175,7 +175,7 @@ phoneInput.addEventListener("input", function(event){
 // Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
    let total = 0
-   const isOpen = checkRestaurantOpen();
+   //const isOpen = checkRestaurantOpen();
    // if(!isOpen){
 
      //Toastify({
