@@ -206,7 +206,6 @@ checkoutBtn.addEventListener("click", function(){
   const cartItems = cart.map((item) => {
     return (
     `
-    
 ${item.name}
     Qtd: (${item.quantity})
     Total: R$ ${preco += item.price * item.quantity}
