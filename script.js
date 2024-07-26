@@ -205,12 +205,10 @@ checkoutBtn.addEventListener("click", function(){
     return (
       ` 
 ${item.name}
-      Quantidade: (${item.quantity})
+      Qtd: (${item.quantity})
       Preço: R$ ${item.price}
-      `
-    )
-    total += item.price;
-    
+      Total: R$ ${total += item.price}
+      `)
   }).join("")
 
 const message = encodeURIComponent(`
