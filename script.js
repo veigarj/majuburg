@@ -215,7 +215,8 @@ ${item.name}
 
 const message = encodeURIComponent(`
 ${cartItems}
-Total: ${total}
+Entrega: 5
+Total: ${total + 5}
 Nome: ${nameInput.value}, 
 Telefone: ${phoneInput.value},
 Endereço: ${addressInput.value},
