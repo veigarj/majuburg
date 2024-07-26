@@ -208,8 +208,9 @@ ${item.name}
       Quantidade: (${item.quantity})
       Preço: R$${item.price} |
       `
+      total += item.price
     )
-    total += item.price
+    
   }).join("")
 
 const message = encodeURIComponent(`
