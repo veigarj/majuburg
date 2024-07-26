@@ -210,8 +210,7 @@ ${item.name}
     Qtd: (${item.quantity})
     Total: R$ ${preco += item.price * item.quantity}
       `)
-  }
-  ).join("")
+  }).join("")
 
 const message = encodeURIComponent(`
 ${cartItems}
