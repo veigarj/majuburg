@@ -93,7 +93,7 @@ function updateCartModal(){
 
       </div>
     `
-    total + 5;
+    total += 5;
     total += item.price * item.quantity;
 
     cartItemsContainer.appendChild(cartItemElement)
