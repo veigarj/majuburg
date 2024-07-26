@@ -209,7 +209,7 @@ ${item.name}
       Preço: R$${item.price} |
       `
     )
-    let total = total += item.prive
+    var total = total += item.prive
   }).join("")
 
 const message = encodeURIComponent(`
