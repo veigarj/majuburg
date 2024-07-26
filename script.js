@@ -93,13 +93,12 @@ function updateCartModal(){
 
       </div>
     `
-    total += 5;
     total += item.price * item.quantity;
 
     cartItemsContainer.appendChild(cartItemElement)
 
   })
-
+  total += 5;
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
